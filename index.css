@@ -44,13 +44,14 @@ body {
   margin-left: 20px;
 
   font-family: "Montserrat", sans-serif;
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 900;
   width: 466px; /* Fixed width */
   height: 50px; /* Fixed height */
   line-height: 50px; /* Line height */
   letter-spacing: 0.2px;
   margin-bottom: 10px;
+  -webkit-text-stroke: 0.1px white; /* Adds thickness */
 }
 
 .subtitle {
