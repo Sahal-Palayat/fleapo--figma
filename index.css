@@ -1,0 +1,462 @@
+/* Base styles */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+
+/* Courses section */
+.courses {
+  background: radial-gradient(closest-side, #0037ff00 0%, #0084ff 100%);
+  padding: 50px 0;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px; /* Based on the image */
+  max-height: 916px;
+  margin: 0 auto;
+  
+  padding: 0px 0px 0px ; /* Adjust left padding for alignment */
+  text-align: left; /* Align text to the left */
+  position: relative;
+}
+
+.section-label {
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #96bb7c;
+  margin-bottom: 10px;
+}
+
+.title {
+  margin-left: 20px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  width: 466px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  line-height: 50px; /* Line height */
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  margin-left: 20px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  width: 466px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .container {
+        padding-left: 20px;
+        height: 100vh;
+    }
+  .section-label {
+   
+    font-weight: 700;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    color: #96bb7c;
+    margin-bottom: 10px;
+  }
+
+  .title {
+  
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px; /* Updated size */
+    font-weight: 700; /* Updated weight */
+    width: 400px; /* Updated width */
+    height: 26px; /* Updated height */
+    line-height: 26px; /* Updated line height */
+    letter-spacing: 0.2px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+   
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    width: 400px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .courses-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    width: calc(100% - 40px); /* Adjust width to account for container padding */
+    margin-left: 20px;
+    width: 100%; /* Ensures it spans full width */
+    margin-left: 1200px;
+    margin-right: auto;
+    box-sizing: border-box;
+    scroll-padding-left: 1200px;
+
+  }
+  .courses-container .course-card:first-child {
+    margin-left: 1457px;
+  }
+
+
+  
+}
+
+.dwnld-sales {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900; /* Bold */
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  width: 57px;
+  height: 24px;
+  display: inline-block; /* Ensures it respects width and height */
+}
+
+/* Courses container */
+.courses-container {
+    margin-top: 20px;
+   
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+  
+    /* Hides scrollbar but keeps scrolling functional */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  
+    /* This ensures exactly 4 cards are visible with a peek at the 5th */
+    width: calc(100% - 40px); /* Adjust width to account for container padding */
+    margin-left: 20px;
+    width: 100vw; /* Ensures it spans full width */
+
+    margin-right: auto;
+  }
+
+  
+  .courses-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in WebKit browsers */
+  }
+  
+  /* Course card */
+  .course-card {
+    width: 238px;
+    min-height: 500px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    flex-shrink: 0; /* Prevents cards from shrinking */
+    color: #333;
+  }
+
+
+/* Adjust container width dynamically to show 4.5 cards */
+.courses-wrapper {
+  width: calc(238px * 4.5 + 30px * 4); /* 4 full cards + 1 half card + gaps */
+  overflow: hidden; /* Keeps it neat */
+}
+
+.course-card1 {
+    width: 238px;
+    min-height: 500px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    flex-shrink: 0; /* Prevents cards from shrinking */
+    color: #333;
+  }
+
+.head {
+  display: inline-block; /* Ensures width and height apply properly */
+  width: 120px;
+  height: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #96bb7c; /* Applying the given color */
+}
+.head1 {
+  display: inline-block; /* Ensures width and height apply properly */
+  width: 150px;
+  height: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #96bb7c; /* Applying the given color */
+}
+
+.course-card.partial {
+  width: 100px;
+}
+
+/* Card image */
+.card-image {
+  width: 238px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sale tag */
+.sale-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #e74040;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+/* Card icons */
+.card-icons {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* First icon (Heart) */
+.heart {
+  width: 40px;
+  height: 40px;
+  border-radius: 44.79px; /* Extra rounded */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    #0000ff,
+    #ff0000
+  ); /* Left (Blue) → Right (Red) */
+}
+
+/* Second icon (Cart) */
+.cart {
+  width: 40px;
+  height: 40px;
+  border-radius: 44.79px; /* Extra rounded */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    #800080,
+    #bd4f42,
+    #ffa500
+  ); /* Left (Blue) → Right (Red) */
+}
+
+/* Third icon (Eye) */
+.eye {
+  width: 40px;
+  height: 40px;
+  border-radius: 44.79px; /* Extra rounded */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    #ffff00,
+    #008000
+  ); /* Left (Blue) → Right (Red) */
+}
+/* Card content */
+.card-content {
+  padding: 25px 20px;
+  text-align: left;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #737373;
+}
+.rating {
+  display: inline-flex;
+  align-items: center;
+  background-color: #2c3e50; /* Dark blue background */
+  color: white;
+  padding: 3px 8px; /* Reduced padding */
+  border-radius: 15px; /* Smaller border radius */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px; /* Slightly smaller font */
+  width: fit-content; /* Adjust width to content */
+}
+
+.star {
+  color: #ffce31; /* Gold color for the star */
+  font-size: 14px; /* Adjust star size */
+  margin-right: 4px; /* Less space between star and number */
+}
+
+.rating-value {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card-title {
+  display: block;
+  width: 203px;
+
+  height: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #252b42;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #737373;
+  margin-bottom: 15px;
+}
+
+/* Sales info */
+.sales-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #737373;
+  margin-bottom: 15px;
+}
+
+.sales-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Price */
+.price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.original-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #bdbdbd;
+  text-decoration: line-through;
+}
+
+.discount-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffab71;
+}
+
+/* Learn more button */
+.learn-more {
+  width: 80%;
+  padding: 15px;
+  background-color: white;
+  color: #96bb7c;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  box-shadow: inset 0 0 0 2px #96bb7c; /* Green partial border */
+}
+
+/* Adding the hover effect */
+.learn-more:hover {
+  background-color: #96bb7c;
+  color: white;
+  box-shadow: inset 0 0 0 2px white; /* Change border to white on hover */
+}
+
+.arrow {
+  margin-left: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .courses-container {
+    justify-content: center;
+  }
+}
