@@ -19,13 +19,15 @@ body {
   padding: 50px 0;
   color: white;
   overflow: hidden;
+  height: auto;
 }
 
 .container {
-  max-width: 1200px; /* Based on the image */
-  max-height: 916px;
+  max-width: 1400px; /* Based on the image */
+  max-height: 140vh;
   margin: 0 auto;
-  
+  margin-left: 35px;
+  margin-top: 20px;
   padding: 0px 0px 0px ; /* Adjust left padding for alignment */
   text-align: left; /* Align text to the left */
   position: relative;
@@ -68,10 +70,24 @@ body {
 }
 
 @media (max-width: 768px) {
+  .courses {
+    background: radial-gradient(closest-side, #0037ff00 0%, #0084ff 100%);
+    padding: 33px 0;
+    color: white;
+    overflow: hidden;
+    height: auto;
+  }
+  
   .container {
-        padding-left: 20px;
-        height: 100vh;
-    }
+    max-width: 1400px; /* Based on the image */
+    max-height: 180vh;
+    margin: 0 auto;
+    margin-left: 15px;
+    
+    padding: 0px 0px 0px ; /* Adjust left padding for alignment */
+    text-align: left; /* Align text to the left */
+    position: relative;
+  }
   .section-label {
    
     font-weight: 700;
@@ -115,25 +131,149 @@ body {
     flex-wrap: nowrap;
     white-space: nowrap;
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity; /* Allow smoother snapping */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE/Edge */
-    width: calc(100% - 40px); /* Adjust width to account for container padding */
-    margin-left: 20px;
-    width: 100%; /* Ensures it spans full width */
-    margin-left: 1200px;
-    margin-right: auto;
+    width: 100%; /* Ensures full width */
+    margin-left: 0; /* Reset unnecessary margins */
+    margin-right: 0;
     box-sizing: border-box;
-    scroll-padding-left: 1200px;
+    scroll-padding-left: 0; /* Reset scrolling behavior */
+}
 
-  }
   .courses-container .course-card:first-child {
-    margin-left: 1460px;
+    margin-left: 1750px;
+  }
+
+ /* Course card */
+ .course-card {
+  width: 260px;
+  min-height: 600px;
+  background: white;
+  border-radius:  10px 10px 0px 0px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  flex-shrink: 0; /* Prevents cards from shrinking */
+  color: #333;
+}
+
+
+/* Adjust container width dynamically to show 4.5 cards */
+.courses-wrapper {
+width: calc(238px * 4.5 + 30px * 4); /* 4 full cards + 1 half card + gaps */
+overflow: hidden; /* Keeps it neat */
+}
+
+.course-card1 {
+  width: 260px;
+  min-height: 600px;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  flex-shrink: 0; /* Prevents cards from shrinking */
+  color: #333;
+}
+
+  
+}
+
+
+
+@media (max-width: 1200px) {
+  .courses {
+    background: radial-gradient(closest-side, #0037ff00 0%, #0084ff 100%);
+   padding-top: 33px;
+    color: white;
+    overflow: hidden;
+    height: auto;
+  }
+  
+  .container {
+    max-width: 1400px; /* Based on the image */
+    max-height: 180vh;
+    margin: 0 auto;
+    margin-left: 15px;
+    
+    padding: 0px 0px 0px ; /* Adjust left padding for alignment */
+    text-align: left; /* Align text to the left */
+    position: relative;
+  }
+  
+
+
+ 
+
+  .courses-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity; /* Allow smoother snapping */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    width: 100%; /* Ensures full width */
+    margin-left: 0; /* Reset unnecessary margins */
+    margin-right: 0;
+    box-sizing: border-box;
+    scroll-padding-left: 0; /* Reset scrolling behavior */
+}
+
+  .courses-container .course-card:first-child {
+    margin-left: 16750px;
+  }
+
+   /* Course card */
+   .course-card {
+    width: 260px;
+    min-height: 600px;
+    background: white;
+    border-radius:  10px 10px 0px 0px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    flex-shrink: 0; /* Prevents cards from shrinking */
+    color: #333;
+  }
+
+
+/* Adjust container width dynamically to show 4.5 cards */
+.courses-wrapper {
+  width: calc(238px * 4.5 + 30px * 4); /* 4 full cards + 1 half card + gaps */
+  overflow: hidden; /* Keeps it neat */
+}
+
+.course-card1 {
+    width: 260px;
+    min-height: 600px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    flex-shrink: 0; /* Prevents cards from shrinking */
+    color: #333;
   }
 
 
   
 }
+
 
 .dwnld-sales {
   font-family: "Montserrat", sans-serif;
@@ -148,7 +288,7 @@ body {
 
 /* Courses container */
 .courses-container {
-    margin-top: 20px;
+    margin-top: 44px;
    
     display: flex;
     gap: 30px;
@@ -158,17 +298,15 @@ body {
     scroll-behavior: smooth;
     padding: 10px 0;
     scroll-snap-type: x mandatory;
-  
     /* Hides scrollbar but keeps scrolling functional */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE/Edge */
-  
     /* This ensures exactly 4 cards are visible with a peek at the 5th */
     width: calc(100% - 40px); /* Adjust width to account for container padding */
     margin-left: 20px;
     width: 100vw; /* Ensures it spans full width */
-
     margin-right: auto;
+    padding-right: 100px;
   }
 
   
@@ -178,7 +316,7 @@ body {
   
   /* Course card */
   .course-card {
-    width: 238px;
+    width: 260px;
     min-height: 500px;
     background: white;
     border-radius:  10px 10px 0px 0px;
@@ -200,7 +338,7 @@ body {
 }
 
 .course-card1 {
-    width: 238px;
+    width: 260px;
     min-height: 500px;
     background: white;
     overflow: hidden;
@@ -242,10 +380,13 @@ body {
 
 /* Card image */
 .card-image {
-  width: 238px; /* Fixed width */
+  width: 260px; /* Fixed width */
   height: 300px; /* Fixed height */
   position: relative;
   overflow: hidden;
+}
+.img-main{
+  width: 260px;
 }
 
 /* Sale tag */
