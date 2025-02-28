@@ -102,12 +102,14 @@ body {
   
     font-family: "Montserrat", sans-serif;
     font-size: 22px; /* Updated size */
-    font-weight: 700; /* Updated weight */
+    font-weight: 600; /* Updated weight */
     width: 400px; /* Updated width */
     height: 26px; /* Updated height */
     line-height: 26px; /* Updated line height */
     letter-spacing: 0.2px;
     margin-bottom: 10px;
+    -webkit-text-stroke: 0.1px white; /* Adds thickness */
+
   }
 
   .subtitle {
@@ -184,8 +186,6 @@ overflow: hidden; /* Keeps it neat */
 
   
 }
-
-
 
 @media (max-width: 1200px) {
   .courses {
@@ -288,8 +288,7 @@ overflow: hidden; /* Keeps it neat */
 
 /* Courses container */
 .courses-container {
-    margin-top: 44px;
-   
+    margin-top: 40px;
     display: flex;
     gap: 30px;
     overflow-x: auto;
