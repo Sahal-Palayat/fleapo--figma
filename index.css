@@ -26,7 +26,7 @@ body {
   max-width: 1400px; /* Based on the image */
   max-height: 140vh;
   margin: 0 auto;
-  margin-left: 35px;
+  margin-left: 25px;
   margin-top: 20px;
   padding: 0px 0px 0px ; /* Adjust left padding for alignment */
   text-align: left; /* Align text to the left */
@@ -34,7 +34,7 @@ body {
 }
 
 .section-label {
-  margin-left: 20px;
+  margin-left: 27px;
   font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.2px;
@@ -43,7 +43,7 @@ body {
 }
 
 .title {
-  margin-left: 20px;
+  margin-left: 27px;
 
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
@@ -57,7 +57,7 @@ body {
 }
 
 .subtitle {
-  margin-left: 20px;
+  margin-left: 27px;
 
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -212,7 +212,7 @@ overflow: hidden; /* Keeps it neat */
  
 
   .courses-container {
-    margin-top: 20px;
+    margin-top: 44px;
     display: flex;
     gap: 30px;
     overflow-x: auto;
@@ -288,7 +288,7 @@ overflow: hidden; /* Keeps it neat */
 
 /* Courses container */
 .courses-container {
-    margin-top: 40px;
+    margin-top: 35px;
     display: flex;
     gap: 30px;
     overflow-x: auto;
